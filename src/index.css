@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 30% 98%;
+    --foreground: 20 15% 20%;
+
+    --card: 30 25% 96%;
+    --card-foreground: 20 15% 20%;
+
+    --popover: 30 30% 98%;
+    --popover-foreground: 20 15% 20%;
+
+    --primary: 12 76% 61%;
+    --primary-foreground: 30 30% 98%;
+
+    --secondary: 150 25% 85%;
+    --secondary-foreground: 150 30% 25%;
+
+    --muted: 30 20% 92%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 150 30% 40%;
+    --accent-foreground: 30 30% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 12 76% 61%;
+
+    --radius: 1rem;
+
+    /* Custom tokens */
+    --coral: 12 76% 61%;
+    --coral-light: 12 76% 75%;
+    --coral-dark: 12 70% 50%;
+    --sage: 150 25% 45%;
+    --sage-light: 150 25% 85%;
+    --sage-dark: 150 30% 25%;
+    --cream: 30 30% 96%;
+    --cream-dark: 30 25% 92%;
+    --warm-brown: 20 15% 25%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(30 30% 98%) 0%, hsl(12 76% 97%) 50%, hsl(150 25% 95%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(12 76% 61%) 0%, hsl(12 70% 50%) 100%);
+    --gradient-sage: linear-gradient(135deg, hsl(150 30% 50%) 0%, hsl(150 25% 40%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(30 30% 98%) 0%, hsl(30 25% 95%) 100%);
+
+    /* Typography */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(20 15% 20% / 0.08);
+    --shadow-medium: 0 8px 30px -8px hsl(20 15% 20% / 0.12);
+    --shadow-coral: 0 8px 30px -8px hsl(12 76% 61% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 15% 10%;
+    --foreground: 30 25% 95%;
+
+    --card: 20 15% 14%;
+    --card-foreground: 30 25% 95%;
+
+    --popover: 20 15% 10%;
+    --popover-foreground: 30 25% 95%;
+
+    --primary: 12 76% 65%;
+    --primary-foreground: 20 15% 10%;
+
+    --secondary: 150 20% 20%;
+    --secondary-foreground: 150 25% 85%;
+
+    --muted: 20 15% 18%;
+    --muted-foreground: 30 15% 60%;
+
+    --accent: 150 25% 35%;
+    --accent-foreground: 30 30% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 15% 20%;
+    --input: 20 15% 20%;
+    --ring: 12 76% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  .text-gradient-coral {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-coral);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .bg-gradient-coral {
+    background-image: var(--gradient-coral);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-coral {
+    box-shadow: var(--shadow-coral);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
