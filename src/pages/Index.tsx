@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
 import productMockup from "@/assets/product-mockup.png";
+import { FlowerButton } from "@/components/FlowerButton";
 import { Check, Shield, Clock, Sparkles, ArrowDown, Heart, Leaf, Star } from "lucide-react";
 import { Flower1, Flower2, Leaf1 } from "@/components/Flowers";
 
@@ -17,31 +18,31 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-background/90 sm:bg-background/75 sm:bg-gradient-to-r sm:from-background/95 sm:via-background/80 sm:to-transparent" />
+        <div className="absolute inset-0 bg-background/70 sm:bg-background/65 sm:bg-gradient-to-r sm:from-background/65 sm:via-background/65 sm:to-transparent" />
         
         
         <div className="relative z-10 container mx-auto px-4 py-20 text-center sm:text-left">
           <div className="max-w-2xl">
             <span className="inline-block px-4 py-2 bg-sage-light text-sage-dark rounded-full text-sm font-medium mb-6 animate-fade-in">
-              Método 100% Natural e Científico
+              100% Natural and Scientific Method
             </span>
             
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-snug mb-6 animate-slide-up">
-              Livre-se da Candidíase
-              <span className="block text-coral">de uma Vez por Todas</span>
+              Get Rid of Thrush
+              <span className="block text-coral">Once and for All</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-8 animate-slide-up animation-delay-200">
-              O guia completo que já ajudou milhares de mulheres a restaurar sua saúde íntima 
-              naturalmente, sem medicamentos agressivos ou efeitos colaterais.
+              The complete guide that has already helped thousands of women restore their intimate health 
+              naturally, without harsh medications or side effects.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start items-center animate-slide-up animation-delay-400">
               <Button variant="hero" size="xl" onClick={scrollToPrice}>
-                Quero Me Libertar Agora
+                I Want Freedom Now
               </Button>
               <Button variant="outline-coral" size="lg" onClick={scrollToPrice}>
-                Ver Detalhes do Método
+                See Method Details
               </Button>
             </div>
           </div>
@@ -57,21 +58,21 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Você Reconhece <span className="text-coral">Esses Sintomas?</span>
+              Do You Recognise <span className="text-coral">These Symptoms?</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              A candidíase recorrente pode afetar muito mais do que sua saúde física
+              Recurrent thrush can affect much more than just your physical health
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              "Coceira intensa que não passa",
-              "Corrimento branco e espesso",
-              "Dor durante relações íntimas",
-              "Vermelhidão e inchaço",
-              "Sensação de ardência constante",
-              "Tratamentos que não funcionam"
+              "Intense itching that won't go away",
+              "Thick white discharge",
+              "Pain during intimacy",
+              "Redness and swelling",
+              "Constant burning sensation",
+              "Treatments that don't work"
             ].map((item, i) => (
               <div 
                 key={i} 
@@ -84,9 +85,18 @@ const Index = () => {
           </div>
           
           <p className="text-center mt-12 text-lg text-muted-foreground italic max-w-2xl mx-auto">
-            Se você se identificou com algum desses pontos, saiba que <span className="text-coral font-semibold">existe uma solução natural</span> que vai muito além dos remédios convencionais.
+            If you identified with any of these points, know that <span className="text-coral font-semibold">there is a natural solution</span> that goes far beyond conventional medicines.
           </p>
         </div>
+
+
+        <div className="flex justify-center mt-6">
+          <Button variant="hero" size="xl" onClick={scrollToPrice}>
+            Get Now
+          </Button>
+        </div>
+
+      
       </section>
 
       {/* Solution Section */}
@@ -94,22 +104,22 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-coral font-semibold uppercase tracking-wider text-sm">A Solução</span>
+              <span className="text-coral font-semibold uppercase tracking-wider text-sm">The Solution</span>
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
-                Método Thrush-Free: O Caminho Natural para a Liberdade
+                Thrush-Free Method: The Natural Path to Freedom
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Um sistema completo baseado em ciência que trata a causa raiz da candidíase, 
-                não apenas os sintomas. Desenvolvido para restaurar o equilíbrio da flora vaginal 
-                de forma natural e duradoura.
+                A complete science-based system that treats the root cause of thrush, 
+                not just the symptoms. Designed to restore vaginal flora balance 
+                naturally and permanently.
               </p>
               
               <div className="space-y-4">
                 {[
-                  { icon: Shield, text: "Baseado em evidências científicas" },
-                  { icon: Leaf, text: "100% natural, sem efeitos colaterais" },
-                  { icon: Clock, text: "Resultados visíveis em 7 dias" },
-                  { icon: Heart, text: "Previne recaídas definitivamente" },
+                  { icon: Shield, text: "Based on scientific evidence" },
+                  { icon: Leaf, text: "100% natural, no side effects" },
+                  { icon: Clock, text: "Visible results in 7 days" },
+                  { icon: Heart, text: "Prevents relapses permanently" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-sage-light flex items-center justify-center shrink-0">
@@ -138,37 +148,37 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              O Que Você Vai <span className="text-coral">Receber</span>
+              What You Will <span className="text-coral">Receive</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Um kit completo com tudo que você precisa para sua recuperação
+              A complete kit with everything you need for your recovery
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
-                title: "Guia Principal: Thrush-Free Method",
-                description: "O método completo de 7 dias para restaurar sua saúde íntima. Inclui compreensão da flora vaginal, causas da candidíase e plano detalhado de tratamento.",
-                value: "R$ 97",
+                title: "Main Guide: Thrush-Free Method",
+                description: "The complete 7-day method to restore your intimate health. Includes understanding vaginal flora, causes of thrush, and a detailed treatment plan.",
+                value: "£29",
                 icon: Sparkles
               },
               {
-                title: "Guia Rápido: Alívio em 24 Horas",
-                description: "Passos imediatos para controlar os sintomas e começar sua recuperação desde o primeiro dia.",
-                value: "R$ 47",
+                title: "Quick Guide: Relief in 24 Hours",
+                description: "Immediate steps to control symptoms and start your recovery from day one.",
+                value: "£15",
                 icon: Clock
               },
               {
-                title: "Plano Alimentar de 7 Dias",
-                description: "Cardápio completo com receitas antifúngicas deliciosas. Café da manhã, almoço e jantar para cada dia.",
-                value: "R$ 67",
+                title: "7-Day Meal Plan",
+                description: "Complete menu with delicious anti-fungal recipes. Breakfast, lunch, and dinner for every day.",
+                value: "£19",
                 icon: Leaf
               },
               {
-                title: "Mini Guia Anti-Recaída",
-                description: "10 passos simples para nunca mais sofrer com candidíase recorrente. Hábitos diários e checklist semanal.",
-                value: "R$ 37",
+                title: "Anti-Relapse Mini Guide",
+                description: "10 simple steps to never suffer from recurrent thrush again. Daily habits and weekly checklist.",
+                value: "£12",
                 icon: Shield
               }
             ].map((item, i) => (
@@ -182,7 +192,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-serif text-xl font-bold text-foreground">{item.title}</h3>
-                    <span className="text-sage font-semibold text-sm">Valor: {item.value}</span>
+                    <span className="text-sage font-semibold text-sm">Value: {item.value}</span>
                   </div>
                 </div>
                 <p className="text-muted-foreground">{item.description}</p>
@@ -197,28 +207,28 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Histórias de <span className="text-coral">Transformação</span>
+              Transformation <span className="text-coral">Stories</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Mulheres reais que recuperaram sua qualidade de vida
+              Real women who reclaimed their quality of life
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: "Mariana S.",
-                text: "Depois de anos sofrendo com candidíase recorrente, finalmente encontrei algo que funciona. Em menos de uma semana já senti diferença!",
+                name: "Kelly S.",
+                text: "After years of suffering from recurrent thrush, I finally found something that works. In less than a week I already felt a difference!",
                 rating: 5
               },
               {
-                name: "Carolina P.",
-                text: "O plano alimentar fez toda a diferença. Não imaginava que a alimentação tinha tanta influência. Recomendo demais!",
+                name: "Diana P.",
+                text: "The meal plan made all the difference. I didn't imagine diet had so much influence. Highly recommend!",
                 rating: 5
               },
               {
-                name: "Juliana M.",
-                text: "Já tinha tentado de tudo. Esse método foi o único que tratou a causa real do problema. Há 6 meses sem nenhuma recaída.",
+                name: "Suzy M.",
+                text: "I had tried everything. This method was the only one that treated the real cause of the problem. 6 months without any relapse.",
                 rating: 5
               }
             ].map((item, i) => (
@@ -244,36 +254,36 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block px-4 py-2 bg-coral/10 text-coral rounded-full text-sm font-semibold mb-6">
-              Oferta Especial por Tempo Limitado
+              Special Limited Time Offer
             </span>
             
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8">
-              Invista na Sua Saúde Hoje
+              Invest in Your Health Today
             </h2>
             
             <div className="bg-background p-8 md:p-12 rounded-3xl shadow-medium border border-border relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-coral text-primary-foreground px-6 py-2 rounded-bl-2xl font-semibold text-sm">
-                Kit Completo
+                Complete Kit
               </div>
               
               <div className="mb-8">
-                <p className="text-muted-foreground line-through text-lg mb-2">De R$ 248,00</p>
+                <p className="text-muted-foreground line-through text-lg mb-2">From £75.00</p>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-2xl text-muted-foreground">R$</span>
-                  <span className="font-serif text-6xl md:text-7xl font-bold text-coral">47</span>
-                  <span className="text-muted-foreground">,00</span>
+                  <span className="text-2xl text-muted-foreground">£</span>
+                  <span className="font-serif text-6xl md:text-7xl font-bold text-coral">15</span>
+                  <span className="text-muted-foreground">.00</span>
                 </div>
-                <p className="text-sage font-semibold mt-2">ou 4x de R$ 11,75 sem juros</p>
+                <p className="text-sage font-semibold mt-2">One-time payment</p>
               </div>
               
               <div className="space-y-4 mb-8 text-left max-w-md mx-auto">
                 {[
-                  "Guia Principal Thrush-Free Method",
-                  "Guia de Alívio em 24 Horas",
-                  "Plano Alimentar de 7 Dias",
-                  "Mini Guia Anti-Recaída",
-                  "Acesso vitalício e atualizações",
-                  "Garantia de 7 dias"
+                  "Thrush-Free Method Main Guide",
+                  "24-Hour Relief Guide",
+                  "7-Day Meal Plan",
+                  "Anti-Relapse Mini Guide",
+                  "Lifetime access and updates",
+                  "14-day guarantee"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-sage shrink-0" />
@@ -283,12 +293,12 @@ const Index = () => {
               </div>
               
               <Button variant="hero" size="xl" className="w-full max-w-md mb-4">
-                Quero Meu Acesso Agora
+                I Want My Access Now
               </Button>
               
               <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
                 <Shield className="w-4 h-4" />
-                Compra 100% segura. Pagamento via Pix, cartão ou boleto.
+                100% secure purchase. Payment via Credit Card or PayPal.
               </p>
             </div>
           </div>
@@ -304,13 +314,13 @@ const Index = () => {
             </div>
             
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Garantia de 7 Dias
+              14-Day Guarantee
             </h2>
             
             <p className="text-muted-foreground text-lg">
-              Sua satisfação é nossa prioridade. Se por qualquer motivo você não ficar satisfeita 
-              com o método nos primeiros 7 dias, devolvemos 100% do seu investimento. 
-              Sem perguntas, sem burocracia.
+              Your satisfaction is our priority. If for any reason you are not satisfied 
+              with the method in the first 7 days, we will refund 100% of your investment. 
+              No questions asked, no hassle.
             </p>
           </div>
         </div>
@@ -321,31 +331,31 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Perguntas <span className="text-coral">Frequentes</span>
+              Frequently Asked <span className="text-coral">Questions</span>
             </h2>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-4">
             {[
               {
-                q: "O método funciona para candidíase recorrente?",
-                a: "Sim! O método foi desenvolvido especialmente para tratar a causa raiz da candidíase, prevenindo recaídas de forma natural e duradoura."
+                q: "Does the method work for recurrent thrush?",
+                a: "Yes! The method was developed specifically to treat the root cause of thrush, preventing relapses naturally and permanently."
               },
               {
-                q: "Em quanto tempo vou ver resultados?",
-                a: "A maioria das mulheres relata alívio dos sintomas já nas primeiras 24-48 horas. O protocolo completo de 7 dias restaura o equilíbrio da flora vaginal."
+                q: "How soon will I see results?",
+                a: "Most women report symptom relief within the first 24-48 hours. The complete 7-day protocol restores the balance of the vaginal flora."
               },
               {
-                q: "Preciso de receita médica?",
-                a: "Não. O método utiliza apenas abordagens naturais como alimentação antifúngica, higiene correta e hábitos saudáveis. Não substitui consulta médica quando necessário."
+                q: "Do I need a prescription?",
+                a: "No. The method uses only natural approaches such as anti-fungal diet, correct hygiene and healthy habits. It does not replace medical advice when necessary."
               },
               {
-                q: "Como recebo o material?",
-                a: "Imediatamente após a confirmação do pagamento, você recebe acesso aos PDFs por email. São arquivos digitais que você pode ler no celular, tablet ou computador."
+                q: "How do I receive the material?",
+                a: "Immediately after payment confirmation, you receive access to the PDFs by email. These are digital files you can read on your mobile, tablet or computer."
               },
               {
-                q: "O pagamento é seguro?",
-                a: "Sim! Utilizamos plataformas de pagamento certificadas e criptografadas. Aceitamos Pix, cartão de crédito e boleto."
+                q: "Is the payment secure?",
+                a: "Yes! We use certified and encrypted payment platforms. We accept major credit cards and PayPal."
               }
             ].map((item, i) => (
               <div 
@@ -364,16 +374,16 @@ const Index = () => {
       <section className="py-20 bg-coral/5">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Você Merece Viver <span className="text-coral">Livre e Leve</span>
+            You Deserve to Live <span className="text-coral">Free and Light</span>
           </h2>
           
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
-            Não deixe a candidíase controlar mais sua vida. Dê o primeiro passo 
-            para recuperar seu bem-estar e confiança hoje mesmo.
+            Don't let thrush control your life anymore. Take the first step 
+            to recover your well-being and confidence today.
           </p>
           
           <Button variant="hero" size="xl" onClick={scrollToPrice}>
-            Começar Minha Transformação
+            Start My Transformation
           </Button>
         </div>
       </section>
@@ -381,10 +391,13 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 bg-foreground text-primary-foreground/70">
         <div className="container mx-auto px-4 text-center text-sm">
-          <p className="mb-2">© 2024 Thrush-Free Method. Todos os direitos reservados.</p>
-          <p>Este produto não substitui orientação médica profissional.</p>
+          <p className="mb-2">© 2024 Thrush-Free Method. All rights reserved.</p>
+          <p>This product does not replace professional medical advice.</p>
         </div>
       </footer>
+
+      {/* Floating Action Button */}
+      <FlowerButton onClick={scrollToPrice} />
     </div>
   );
 };
